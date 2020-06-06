@@ -19,17 +19,17 @@ error: string;
     console.log('password',this.password);
     if(this.userid === 'Asha'){
       if(this.password === 'user'){
-        this.router.navigate(['./pages/select-country',""]);
+        this.router.navigate(['home']);
       }
     }
     else if (this.userid === 'Dev'){
       if(this.password === 'test'){
-        this.router.navigate(['./pages/select-country',""]);
+        this.router.navigate(['home']);
       }
     }
     else if (this.userid === 'Shreya'){
       if(this.password === 'code'){
-        this.router.navigate(['./pages/select-country',""]);
+        this.router.navigate(['home']);
       }
     }
     else{

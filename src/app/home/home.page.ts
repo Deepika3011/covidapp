@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { RestapiService } from '../restapi.service'
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+   
+  
+  private getTotal;
+  router: any;
+  constructor(public route:Router,  public restapi: RestapiService) {
 
-  constructor() {}
-
-}
+    this.restapi.getTotal().subscribe((response) => {
+      console.log(response);
+      this.getTotal = response;
+    });
+  }
+  navigatetoChane(){
+    this.route.navigate(['/pages/select-country']);
+  }
+  
+  }
+}   
