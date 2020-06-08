@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/select-country/select-country.module').then( m => m.SelectCountryPageModule)
     
   },
+  {
+    path: 'countrywise',
+    loadChildren: () => import('./countrywise/countrywise.module').then( m => m.CountrywisePageModule)
+  },
 ];
 
 @NgModule({

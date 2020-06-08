@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { RestapiService } from '../restapi.service'
 
 @Component({
@@ -11,7 +11,7 @@ export class HomePage {
    
   
   private getTotal;
-  router: any;
+  
   constructor(public route:Router,  public restapi: RestapiService) {
 
     this.restapi.getTotal().subscribe((response) => {
@@ -23,5 +23,5 @@ export class HomePage {
     this.route.navigate(['/pages/select-country']);
   }
   
-  }
-}   
+}
+   

@@ -10,7 +10,7 @@ export class RestapiService {
 
   baseUrl:string = "https://api.covid19api.com/summary";
   baseUrlc:string = "https://api.covid19api.com/countries";
-
+  base:string = "https://api.covid19api.com/country/south-africa?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z";
 
   constructor(private  httpClient : HttpClient) {
     this.getTotal();
@@ -26,5 +26,7 @@ export class RestapiService {
       return this.httpClient.get(this.baseUrlc);
 
       }
-
+    public getCountrywise(){
+      return this.httpClient.get(this.base);
+    }
 }
